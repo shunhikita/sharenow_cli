@@ -1,28 +1,37 @@
 # SharenowCli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sharenow_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+sharenow-cli is a gem that provides cli that can upload files from the command line to the file upload service [share-now](https://www.share-now.me)
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'sharenow_cli'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install sharenow_cli
 
 ## Usage
 
-TODO: Write usage instructions here
+basic usage
+
+Please specify the file path you want to register as the first argument.
+
+
+```
+$ sharenow push './sample.rb' -t 'title' -d 'description' -l 3
+```
+
+options
+
+|option|alias|about|default|
+|:---|:---|:---|:---|
+|--title|-t|set title|""|
+|--desc|-d|set description|""|
+|--delete_limit|-l|set file and content delte limit|14|
+
+
+Multiple files can be specified
+
+```
+$ sharenow push './foo.rb ./bar.rb' -t 'title' -d 'description' -l 3
+$ sharenow push './.*rb' -t 'title' -d 'description' -l 3
+```
 
 ## Development
 

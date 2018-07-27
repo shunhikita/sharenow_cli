@@ -6,7 +6,7 @@ require 'json'
 module SharenowCli
   class CLI < Thor
 
-    BASE_URL = 'https://share-now.me'.freeze
+    BASE_URL = 'https://www.share-now.me'.freeze
 
     SharenowError = Class.new(StandardError)
 
@@ -42,7 +42,7 @@ module SharenowCli
       elsif res.status == 400
         puts JSON.parse(res.body).join("\n")
       else
-        p JSON.parse(res.body)
+        puts res.body
       end
     end
 
@@ -60,7 +60,7 @@ module SharenowCli
       def body_params(title, desc, delete_limit, files)
         params = {content: {}}
         params[:content][:title] = title unless title.nil?
-        params[:content][:desc] = desc unless desc.nil?
+        params[:content][:description] = desc unless desc.nil?
         params[:content][:delete_limit] = delete_limit.to_i unless delete_limit.nil?
         params[:content][:files] = files
         params
