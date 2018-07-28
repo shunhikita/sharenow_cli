@@ -28,7 +28,10 @@ module SharenowCli
 
         raise SharenowError.new('Directory is not supported') if file_paths.find{|file| FileTest.directory?(file) }
 
-        upload_ios = file_paths.map { |file_path| Faraday::UploadIO.new(file_path,  MIME::Types.type_for(file_path)[0].to_s) }
+        upload_ios = file_paths.map do |file_path|
+          content_type = MIME::Types.type_for(file_path).first.to_s || 'application/oct-stream'
+          Faraday::UploadIO.new(file_path,  content_type)
+        end
         upload_files.concat(upload_ios).uniq
       end
 
