@@ -6,7 +6,7 @@ require 'json'
 module SharenowCli
   class CLI < Thor
 
-    BASE_URL = 'https://www.share-now.me'.freeze
+    BASE_URL = 'https://share-now.me'.freeze
 
     SharenowError = Class.new(StandardError)
 
