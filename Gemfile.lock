@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sharenow_cli (0.1.1)
+    sharenow_cli (0.1.2)
       faraday
       mime-types
       thor
