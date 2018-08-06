@@ -1,10 +1,16 @@
 # SharenowCli
 
-sharenow-cli is a gem that provides cli that can upload files from the command line to the file upload service [share-now](https://www.share-now.me)
+sharenow-cli is a gem that provides cli that can upload files from the command line to the file upload service [share-now](https://share-now.me)
 
 ## Installation
 
     $ gem install sharenow_cli
+
+## Setup
+
+    $ export SHARENOW_API_TOKEN="YOUR_API_TOKEN"
+
+Register account with [share-now.me](https://share-now.me) and issue API token
 
 ## Usage
 
