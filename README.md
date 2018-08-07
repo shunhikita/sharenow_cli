@@ -33,9 +33,9 @@ $ sharenow push './.*rb' -t 'title' -d 'description' -l 3
 options
 
 ```
--t, --title           set title
--d, --desc            set description
--l, --delete_limit    set deletion deadline
+-t, --title           set a title of the file
+-d, --desc            set a description of the file
+-l, --delete_limit    set deletion deadline up to 90 days. If not set it will not be deleted.
 ```
 
 ## Contributing
