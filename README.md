@@ -38,10 +38,6 @@ options
 -l, --delete_limit    set deletion deadline up to 90 days. If not set it will not be deleted.
 ```
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sharenow_cli.
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
